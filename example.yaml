@@ -1,0 +1,25 @@
+
+#key:pair value
+
+name: My Workflow
+name: 10
+name: Boolean
+
+# Nested dict
+
+config:
+  path: aaaaa/ccccccc
+  enviroment: ddddddd
+
+# Arrays
+
+colors:
+  - red
+  - gteen
+  - 19
+  - boolean
+  - name: blue
+    hex: 0000ff
+    lables:
+      -experimental
+      -accessibility
