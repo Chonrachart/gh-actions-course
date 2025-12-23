@@ -11,7 +11,7 @@ jobs:
           echo "This jobs is running on an Ubuntu runner."
           echo "Runner OS: $RUNNER_OS"
   windows-echo:
-    runs-on: Windows-latest'
+    runs-on: windows-latest'
     steps:
       - name: Show OS
         shell: bash
