@@ -4,8 +4,8 @@ on:
   #push:
   #pull_request:
   #schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+  #  - cron: '*/5 * * * *'
+  #workflow_dispatch:
 
 
 
