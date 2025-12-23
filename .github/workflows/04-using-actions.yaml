@@ -1,7 +1,7 @@
 name: 04 - Using Actions
 
 on: 
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
@@ -15,8 +15,10 @@ jobs:
       # 1.Checkout the code from the repository so runners can access it
       - name: Checkout Code
         uses: actions/checkout@v4
+      # print working folders for debug
       - name: Printing Folders
         run: ls
+      # set up node to specific version
       - name: Setup Node 
         uses: actions/setup-node@v4
         with:
@@ -24,8 +26,13 @@ jobs:
       # 2.Install deps of our react application will fail cause not set working directory yet
       - name: Install Dependencies
         run: npm ci  
+      # 3.Execute automated tests
       - name: Run Unit Tests
         run: npm run test
+      
+      ### primary flows ###
+      # 1.Checkout the code from the repository so runners can access it
+      # 2.Install deps of our react application will fail cause not set working directory yet
       # 3.Execute automated tests
 
       
