@@ -1,10 +1,17 @@
 name: 06 - contexts
+
 # this runner context aren't avilable in run-name
-run-name: My custom workflow run name - ${{ runner.os }}
+#run-name: My custom workflow run name - ${{ runner.os }}
+
+run-name: 06 - Contexts | DEBUG - ${{ inputs.debug }}
 
 on: 
   push:
   workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
   
 jobs:
   echo-data:
