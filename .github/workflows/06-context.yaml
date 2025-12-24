@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       debug:
-        description: this is debug option in workflow_dispatch
+        description: enable debug mode
         type: boolean
         default: false
 
