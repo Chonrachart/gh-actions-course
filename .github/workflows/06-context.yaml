@@ -1,4 +1,6 @@
 name: 06 - contexts
+# this runner context aren't avilable in run-name
+run-name: My custom workflow run name - ${{ runner.os }}
 
 on: 
   push:
