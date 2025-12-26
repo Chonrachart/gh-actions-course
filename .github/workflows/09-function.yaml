@@ -1,13 +1,23 @@
 name: 09 - Using functions
 
 on:
-  pull_request:
+  #pull_request:
   workflow_dispatch:
   
 jobs:
   echo1:
     runs-on: ubuntu-latest
     steps:
+      # - name: Print PR title
+      #   run: echo "${{ github.event.pull_request.title }}"
+      # - name: Print PR labels
+      #   run: |
+      #     cat << EOF
+      #     ${{ toJSON(github.event.pull_request.labels) }}
+      #     EOF
+      - name: Bug step
+        #if: ${{ !cancelled() && contains(github.event.pull_request.title, 'fix') }}
+        run: echo "I am a bug fix"
       # add sleep that can cancelled to check cancelled work
       - name: Sleep for 20 seconds
         run: sleep 20
