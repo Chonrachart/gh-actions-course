@@ -32,6 +32,7 @@ jobs:
           cat "$GITHUB_OUTPUT" 
       - name: Step with mistake 
         run: | 
+          echo "$GITHUB_OUTPUT"
           echo "mistake=true" > "$GITHUB_OUTPUT"  
           cat "$GITHUB_OUTPUT"
         
