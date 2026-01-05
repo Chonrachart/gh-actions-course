@@ -2,10 +2,10 @@ FROM python:alpine3.19
 
 WORKDIR /app
 
-COPY requirement.txt .
+COPY requirements.txt .
 
 RUN python3 --version
-RUN PIP install --no-cache-dir -r requirement.txt
+RUN PIP install --no-cache-dir -r requirements.txt
 
 COPY . .
 
