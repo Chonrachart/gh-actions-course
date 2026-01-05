@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       target-env:
+        description: target-env
         type: environment
         default: staging
 
