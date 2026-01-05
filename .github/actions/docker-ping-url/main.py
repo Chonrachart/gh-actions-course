@@ -1,6 +1,6 @@
 import os
 import requests
-from time import sleep
+import time
 
 def run():
     website_url = os.getenv("INPUT_URL")
