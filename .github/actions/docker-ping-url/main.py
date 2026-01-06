@@ -2,6 +2,10 @@ import os
 import requests
 import time
 
+def set_output(file_path, key, value):
+    with open(file_path, 'a') as file:
+        print(f'{key}={value}', file=file)
+
 def run():
     website_url = os.getenv("INPUT_URL")
     delay = int(os.getenv("INPUT_DELAY"))
@@ -9,6 +13,8 @@ def run():
 
 
     website_reachable = ping_url(website_url, delay, max_trials)
+
+    set_output(os.getenv('GITHUB_OUTPUT'), 'url-reachable', website_reachable )
 
     if not website_reachable:
         raise Exception(f"Website {website_url} is unreachable.")
