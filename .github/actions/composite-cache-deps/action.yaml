@@ -16,7 +16,7 @@ inputs:
     required: false
 
 outputs:
-  install-deps:
+  installed-deps:
     description: Whether dependencies were istalled or not  
     value: ${{ steps.cache.outputs.cache-hit != 'true'}}
 
