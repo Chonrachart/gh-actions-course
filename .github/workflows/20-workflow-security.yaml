@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Check PR title
       # =~ regx match
+      # can run command through github pull request title
         run: |
           title=${{ github.event.pull_request.title }}
           if [[ $title =~ ^feat ]]; then 
